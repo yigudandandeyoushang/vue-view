@@ -1,15 +1,22 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-    <router-view></router-view>
-    <router-link to="/apple">to apple</router-link>
-    <router-link to="/banan">to banan</router-link>
+    {{ totalPrice }}
+    <apple></apple>
+    <banan></banan>
   </div>
 </template>
 
 <script>
+import Apple from './components/apple.vue'
+import Banan from './components/banan.vue'
 export default {
-  name: 'app'
+  components:{Apple,Banan},
+  computed:{
+    totalPrice(){
+      return this.$store.state.totalPrice
+    }
+  }
 }
 </script>
 
