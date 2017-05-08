@@ -1,0 +1,181 @@
+{
+  "getNewsList": [
+    {
+      "id": 1,
+      "title": "新闻条目1新闻条目1新闻条目1新闻条目1",
+      "url": "http://starcraft.com"
+    },
+    {
+      "id": 2,
+      "title": "新闻条目2新闻条目2新闻条目2新闻条目2",
+      "url": "http://warcraft.com"
+    },
+    {
+      "id": 3,
+      "title": "新闻条3新闻条3新闻条3",
+      "url": "http://overwatch.com"
+    },
+    {
+      "id": 4,
+      "title": "新闻条4广告发布",
+      "url": "http://hearstone.com"
+    },
+    {
+      "userID": 123,
+      "id": 5
+    },
+    {
+      "userID": 123,
+      "id": 6
+    },
+    {
+      "userID": 123,
+      "id": 7
+    },
+    {
+      "userID": 123,
+      "id": 8
+    },
+    {
+      "userID": 123,
+      "id": 9
+    },
+    {
+      "userID": 123,
+      "id": 10
+    },
+    {
+      "userID": 123,
+      "id": 11
+    },
+    {
+      "userID": 123,
+      "id": 12
+    },
+    {
+      "userID": 123,
+      "id": 13
+    },
+    {
+      "userID": 123,
+      "id": 14
+    },
+    {
+      "userID": 123,
+      "id": 15
+    },
+    {
+      "userID": 123,
+      "id": 16
+    },
+    {
+      "userID": 123,
+      "id": 17
+    },
+    {
+      "userID": 123,
+      "id": 18
+    },
+    {
+      "userID": 123,
+      "id": 19
+    },
+    {
+      "userID": 123,
+      "id": 20
+    },
+    {
+      "userID": 123,
+      "id": 21
+    },
+    {
+      "userID": 123,
+      "id": 22
+    },
+    {
+      "userID": 123,
+      "id": 23
+    },
+    {
+      "userID": 123,
+      "id": 24
+    },
+    {
+      "userID": 123,
+      "id": 25
+    },
+    {
+      "userID": 123,
+      "id": 26
+    },
+    {
+      "userID": 123,
+      "id": 27
+    },
+    {
+      "userID": 123,
+      "id": 28
+    },
+    {
+      "userID": 123,
+      "id": 29
+    },
+    {
+      "userID": 123,
+      "id": 30
+    },
+    {
+      "userID": 123,
+      "id": 31
+    },
+    {
+      "userID": 123,
+      "id": 32
+    },
+    {
+      "userID": 123,
+      "id": 33
+    }
+  ],
+  "login": {
+    "username": "yudongdong",
+    "userId": 123123
+  },
+  "getPrice": {
+    "amount": 678
+  },
+  "createOrder": {
+    "orderId": "6djk979"
+  },
+  "getOrderList": {
+    "list": [
+      {
+        "orderId": "ddj123",
+        "product": "数据统计",
+        "version": "高级版",
+        "period": "1年",
+        "buyNum": 2,
+        "date": "2016-10-10",
+        "amount": "500元"
+      },
+      {
+        "orderId": "yuj583",
+        "product": "流量分析",
+        "version": "户外版",
+        "period": "3个月",
+        "buyNum": 1,
+        "date": "2016-5-2",
+        "amount": "2200元"
+      },
+      {
+        "orderId": "pmd201",
+        "product": "广告发布",
+        "version": "商铺版",
+        "period": "3年",
+        "buyNum": 12,
+        "date": "2016-8-3",
+        "amount": "7890元"
+      }
+    ]
+  }
+}

@@ -18,14 +18,15 @@
         <h2>最新消息</h2>
         <ul>
           <li v-for="item in newsList">
-            <a :href="item.url">{{ item.title }}</a>
+            <a :href="item.url" class="new-item">{{ item.title }}</a>
           </li>
         </ul>
       </div>
     </div>
     <div class="index-right">
+      <slide-show :slides="slides" :inv="slideSpeed"></slide-show>
       <div class="index-board-list">
-        <div class="index-board-item" v-for="(item,index) in boardList" :class="[{'line-last': index%2 !==0 },'index-board-' + item.id ]">
+        <div class="index-board-item" v-for="(item,index) in boardList" :class="[{'line-last': index%2 !==0 },'index-board-'+item.id]">
           <h2>{{item.title}}</h2>
           <p>{{item.description}}</p>
           <div class="index-board-button">
@@ -37,9 +38,44 @@
   </div>
 </template>
 <script>
+import slideShow from '../components/slideShow'
 export default{
+  components:{
+    slideShow
+  },
+  created:function(){
+    this.$http.get('api/getNewsList')
+    .then((res) => {
+      this.newsList = res.data
+    },(err) => {
+      console.log(err);
+    })
+  },
   data(){
     return{
+      slideSpeed: 2000,
+      slides: [
+        {
+          src: require('../assets/slideShow/pic1.jpg'),
+          title: 'xxx1',
+          href: 'detail/analysis'
+        },
+        {
+          src: require('../assets/slideShow/pic2.jpg'),
+          title: 'xxx2',
+          href: 'detail/count'
+        },
+        {
+          src: require('../assets/slideShow/pic3.jpg'),
+          title: 'xxx3',
+          href: 'http://xxx.xxx.com'
+        },
+        {
+          src: require('../assets/slideShow/pic4.jpg'),
+          title: 'xxx4',
+          href: 'detail/forecast'
+        }
+      ],
       boardList: [
         {
           title: '开放产品',
@@ -70,25 +106,7 @@ export default{
           saleout: false
         }
       ],
-      newsList:[
-        {
-          title: '数据统计',
-          url: 'http://starcraft.com'
-        },
-        {
-          title: '数据预测',
-          url: 'http://warcraft.com'
-        },
-        {
-          title: '流量分析',
-          url: 'http://overwatch.com',
-          hot: true
-        },
-        {
-          title: '广告发布',
-          url: 'http://hearstone.com'
-        }
-      ],
+      newsList:[],
       productList:{
         pc:{
           title: 'PC产品',
@@ -197,13 +215,13 @@ export default{
   padding-left: 120px;
 }
 .index-board-car .index-board-item-inner{
-  background: url(../assets/images/1.png) no-repeat;
+  background:url(../assets/images/1.png) no-repeat;
 }
 .index-board-loud .index-board-item-inner{
   background: url(../assets/images/2.png) no-repeat;
 }
 .index-board-earth .index-board-item-inner{
-  background: url(../assets/images/3.png) no-repeat;
+  background: url(https://img11.360buyimg.com/mobilecms/s250x250_jfs/t3535/165/1084483261/162162/9686b1f0/581c1937N0931ec68.jpg) no-repeat;
 }
 .index-board-hill .index-board-item-inner{
   background: url(../assets/images/4.png) no-repeat;
